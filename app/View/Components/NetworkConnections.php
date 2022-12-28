@@ -6,10 +6,6 @@ use Illuminate\View\Component;
 
 class NetworkConnections extends Component
 {
-    public $showSuggestion = true;
-    public $showRequest = false;
-    public $showReceivedRequest = false;
-    public $showConnections = false;
     /**
      * Create a new component instance.
      *
@@ -28,14 +24,5 @@ class NetworkConnections extends Component
     public function render()
     {
         return view('components.network-connections');
-    }
-
-    public function showTab($tab){
-        $this->showSuggestion = false;
-        $this->showRequest = false;
-        $this->showReceivedRequest = false;
-        $this->showConnections = false;
-
-        $this->$tab = true;
     }
 }
